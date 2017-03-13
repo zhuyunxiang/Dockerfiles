@@ -1,4 +1,4 @@
-FROM centos:6.5
+FROM centos
 MAINTAINER zhuyunxiang 493405455@qq.com
 
 # 设置中国时区
