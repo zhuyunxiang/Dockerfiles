@@ -10,8 +10,11 @@ ENV TZ "Asia/Shanghai"
 # 解决公司内网使用代理上网的问题
 # RUN echo proxy=$HTTP_PROXY >> /etc/yum.conf
 
+RUN	yum clean all
+RUN	yum makecache
+
 # 准备环境 安装 wget
-# RUN yum -y update
+RUN yum -y update
 
 # 安装依赖
 RUN	yum -y install gcc-c++
@@ -32,6 +35,9 @@ RUN	tar zxvf nginx-1.11.10.tar.gz && \
 
 # 配置及编译Nginx
 RUN cd nginx-1.11.10 && ./configure --prefix=/usr/local/nginx && make && make install
+
+# 删除临时文件
+RUN rm -rf nginx-1.11.10
 
 # 加载本地Nginx配置
 ADD ./nginx.conf /usr/local/nginx/conf/nginx.conf
