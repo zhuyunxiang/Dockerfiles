@@ -11,7 +11,7 @@ ENV TZ "Asia/Shanghai"
 # RUN echo proxy=$HTTP_PROXY >> /etc/yum.conf
 
 # 准备环境 安装 wget
-RUN yum -y update
+# RUN yum -y update
 
 # 安装依赖
 RUN	yum -y install gcc-c++
