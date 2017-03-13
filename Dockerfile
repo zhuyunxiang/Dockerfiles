@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:6.5
 MAINTAINER zhuyunxiang 493405455@qq.com
 
 # 设置中国时区
@@ -15,9 +15,8 @@ RUN	yum makecache
 
 # 准备环境 安装 wget
 RUN yum -y update
-RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 # 安装依赖
-RUN	yum -y install gcc
+RUN	yum -y install gcc-c++
 RUN yum -y install pcre pcre-devel  
 RUN yum -y install zlib zlib-devel  
 RUN yum -y install openssl openssl-devel
