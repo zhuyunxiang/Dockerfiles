@@ -5,10 +5,10 @@ MAINTAINER zhuyunxiang 493405455@qq.com
 ENV TZ "Asia/Shanghai"
 
 # 线上版本需要注释掉
-ENV HTTP_PROXY http://10.103.4.47:3128
+# ENV HTTP_PROXY http://10.103.4.47:3128
 
 # 解决公司内网使用代理上网的问题
-RUN echo proxy=$HTTP_PROXY >> /etc/yum.conf
+# RUN echo proxy=$HTTP_PROXY >> /etc/yum.conf
 
 # 准备环境 安装 wget
 RUN yum -y update
@@ -22,8 +22,8 @@ RUN	yum -y install wget
 RUN	yum clean all
 
 # 线上版本需要注释掉
-RUN echo http_proxy=$HTTP_PROXY >> /etc/wgetrc && \
-	echo ftp_proxy=$HTTP_PROXY >> /etc/wgetrc
+# RUN echo http_proxy=$HTTP_PROXY >> /etc/wgetrc && \
+#	echo ftp_proxy=$HTTP_PROXY >> /etc/wgetrc
 
 # 下载Nginx源码包
 RUN wget http://www.nginx.org/download/nginx-1.11.10.tar.gz
