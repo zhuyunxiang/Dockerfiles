@@ -1,2 +1,1 @@
-docker build -t centos:nginx . && \
-docker run -it -p 80:80 --name nginxServer -v `pwd`/logs:/usr/local/nginx/logs -v `pwd`/html:/usr/local/nginx/html -v `pwd`/conf/nginx.conf:/usr/local/nginx/conf/nginx.conf centos:nginx
+docker build -t centos:nginx . && docker run -it -p 80:80 --name nginxServer -v `pwd`/logs:/usr/local/nginx/logs -v `pwd`/html:/usr/local/nginx/html -v `pwd`/conf/nginx.conf:/usr/local/nginx/conf/nginx.conf centos:nginx
