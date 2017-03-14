@@ -1,1 +1,0 @@
-docker build -t centos:nginx . && docker run -it -p 80:80 centos:nginx

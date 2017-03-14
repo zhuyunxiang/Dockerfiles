@@ -1,2 +1,2 @@
-# docker-nginx
-Nginx in docker with centos.
+# Dockerfiles
+Common dockerfiles in centos.
