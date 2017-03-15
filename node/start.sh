@@ -1,0 +1,1 @@
+docker run -i -t -p 8000:8000 -v "$(pwd)"/src:/webapp -w /webapp node sh -c 'npm install && npm start'
