@@ -1,0 +1,1 @@
+docker run -it -p 80:80 --name nginxServer -v `pwd`/logs:/etc/nginx/logs -v `pwd`/html:/etc/nginx/html -v `pwd`/conf/nginx_ssl.conf:/etc/nginx/nginx.conf nginx
